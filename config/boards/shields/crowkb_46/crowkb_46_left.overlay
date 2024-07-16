@@ -1,4 +1,4 @@
-#include "iris.dtsi"
+#include "crowkb_46.dtsi"
 
 default_kscan: kscan {
     col-gpios = <&pro_micro 8 GPIO_ACTIVE_HIGH>,

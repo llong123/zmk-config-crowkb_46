@@ -1,4 +1,4 @@
-#include "iris.dtsi"
+#include "crowkb_46.dtsi"
 
 &default_transform {
     col-offset = <6>;
