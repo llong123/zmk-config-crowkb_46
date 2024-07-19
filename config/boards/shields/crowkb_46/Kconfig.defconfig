@@ -1,14 +1,14 @@
-if SHIELD_CROWKB_46_LEFT
+if SHIELD_CROWKB_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "crowkb_46"
+    default "crowkb"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_CROWKB_46_LEFT || SHIELD_CROWKB_46_RIGHT
+if SHIELD_CROWKB_LEFT || SHIELD_CROWKB_RIGHT
 
 config ZMK_SPLIT
     default y
