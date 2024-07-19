@@ -1,5 +1,5 @@
 config SHIELD_CROWKB_LEFT
-    def_bool $(shields_list_contains, crowkb_left)
+    def_bool $(shields_list_contains,crowkb_left)
 
 config SHIELD_CROWKB_RIGHT
-    def_bool $(shields_list_contains, crowkb_right)
+    def_bool $(shields_list_contains,crowkb_right)
