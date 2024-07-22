@@ -24,9 +24,9 @@
         };
          nerps_layer {
             bindings = <
-    &kp TAB     &kp Q   &kp W       &kp E       &kp R       &kp T       &kp Y   &kp U   &kp I       &kp O   &kp P       &kp BSLH
-    &kp LSHFT   &kp A   &kp S       &kp D       &kp F       &kp G       &kp H   &kp J   &kp K       &kp L   &kp SEMI    &kp SQT
-    &kp LCTRL   &kp Z   &kp X       &kp C       &kp V       &kp B       &kp N   &kp M   &kp COMMA   &kp DOT &kp FSLH    &kp RSHFT
+    &kp TAB     &kp X   &kp L       &kp D       &kp P       &kp V       &kp Z   &kp K   &kp O       &kp U    &kp SEMI &kp BSLH
+    &kp LSHFT   &kp N   &kp R       &kp T       &kp S       &kp G       &kp Y   &kp H   &kp E       &kp I    &kp A    &kp FSLH
+    &kp LCTRL   &kp J   &kp M       &kp C       &kp W       &kp Q       &kp B   &kp F   &kp SQT     &kp COMM &kp DOT  &kp RSHFT
                                                             &kp ESC     &kp CAPS
                         &kp LALT    &kp LGUI    &kp SPACE   &mo 2       &mo 3   &kp RET &kp BSPC    &kp DEL
             >;
@@ -43,8 +43,8 @@
         system_layer {
             bindings = <
     &none   &none   &kp F1  &kp F2  &kp F3  &kp F4      &kp PSCRN   &kp PAUSE_BREAK &none       &none       &none   &mo 4
-    &none   &none   &kp F5  &kp F6  &kp F7  &kp F8      &kp PG_UP   &kp HOME        &kp UP      &kp END     &none   &tog 0
-    &none   &none   &kp F9  &kp F10 &kp F11 &kp F12     &kp PG_DN   &kp LEFT        &kp DOWN    &kp RIGHT   &none   &tog 1
+    &none   &none   &kp F5  &kp F6  &kp F7  &kp F8      &kp PG_UP   &kp HOME        &kp UP      &kp END     &none   &tog 1
+    &none   &none   &kp F9  &kp F10 &kp F11 &kp F12     &kp PG_DN   &kp LEFT        &kp DOWN    &kp RIGHT   &none   &none
                                             &trans      &trans
                     &trans  &trans  &trans  &trans      &trans      &trans          &trans      &trans
             >;
