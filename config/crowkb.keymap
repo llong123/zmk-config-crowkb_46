@@ -24,9 +24,9 @@
         };
          nerps_layer {
             bindings = <
-    &kp TAB     &kp X   &kp L       &kp D       &kp P       &kp V       &kp Z   &kp K   &kp O       &kp U    &kp SEMI &kp BSLH
-    &kp LSHFT   &kp N   &kp R       &kp T       &kp S       &kp G       &kp Y   &kp H   &kp E       &kp I    &kp A    &kp FSLH
-    &kp LCTRL   &kp J   &kp M       &kp C       &kp W       &kp Q       &kp B   &kp F   &kp SQT     &kp COMM &kp DOT  &kp RSHFT
+    &kp TAB     &kp X   &kp L       &kp D       &kp P       &kp V       &kp Z   &kp K   &kp O       &kp U     &kp SEMI &kp BSLH
+    &kp LSHFT   &kp N   &kp R       &kp T       &kp S       &kp G       &kp Y   &kp H   &kp E       &kp I     &kp A    &kp FSLH
+    &kp LCTRL   &kp J   &kp M       &kp C       &kp W       &kp Q       &kp B   &kp F   &kp SQT     &kp COMMA &kp DOT  &kp RSHFT
                                                             &kp ESC     &kp CAPS
                         &kp LALT    &kp LGUI    &kp SPACE   &mo 2       &mo 3   &kp RET &kp BSPC    &kp DEL
             >;
