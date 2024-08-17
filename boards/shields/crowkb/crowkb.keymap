@@ -21,7 +21,7 @@
                                                             &kp ESC     &kp CAPS
                         &kp LALT    &kp LGUI    &kp SPACE   &mo 1       &mo 2   &kp RET &kp BSPC    &kp DEL
             >;
-        };    
+        };
         symbol_layer {
             bindings = <
     &kp GRAVE       &kp EXCL    &kp AT  &kp HASH    &kp DLLR    &kp PRCNT   &kp MINUS   &kp LBRC    &kp RBRC    &kp STAR    &kp PLUS    &kp TILDE
@@ -50,4 +50,4 @@
             >;
         };
     };
-}; 
+};
