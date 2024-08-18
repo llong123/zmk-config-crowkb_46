@@ -1,6 +1,6 @@
 file_format: "1"
-id: crowkb
-name: crowkb
+id: crowkb_46
+name: crowkb_46
 type: shield
 url: https://github.com/c-botz/crowkb
 requires: [pro_micro]
@@ -9,5 +9,5 @@ features:
   - keys
   - display
 siblings:
-  - crowkb_left
-  - crowkb_right
+  - crowkb_46_left
+  - crowkb_46_right

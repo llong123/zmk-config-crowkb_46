@@ -8,7 +8,7 @@
 2. Navigate to the **Actions** tab and click the "I understand my workflows, go ahead and run them" button to enable builds.
 
    ![Actions tab with "I understand my workflows" button](https://i.imgur.com/B7cTAE6.png)
-3. Edit [config/crowkb.conf](config/crowkb.conf) to add/enable/disable features. Edit [config/crowkb.keymap](config/crowkb.keymap) to change the keymap. If you do not have a nice!view, you will need to remove `nice_view_adapter nice_view` from the shield list in `build.yaml` in order to use the OLED.
+3. Edit [config/crowkb_46.conf](config/crowkb_46.conf) to add/enable/disable features. Edit [config/crowkb_46.keymap](config/crowkb_46.keymap) to change the keymap. If you do not have a nice!view, you will need to remove `nice_view_adapter nice_view` from the shield list in `build.yaml` in order to use the OLED.
 4. After committing your changes, your firmware will begin compiling. Assuming there are no typos or other problems, it will eventually be [downloadable from the Actions tab](https://zmk.dev/docs/user-setup#installing-the-firmware).
 5. [Flash](https://zmk.dev/docs/user-setup#flashing-uf2-files) the non-settings-reset firmware.
 
@@ -37,7 +37,7 @@ manifest:
     path: config
 ```
 
-After making this change, add a copy of [the configuration file](config/crowkb.conf) and [the keymap](config/crowkb.keymap) to the `config` folder that is already in your repo.
+After making this change, add a copy of [the configuration file](config/crowkb_46.conf) and [the keymap](config/crowkb_46.keymap) to the `config` folder that is already in your repo.
 
 ## Common Questions/Problems
 

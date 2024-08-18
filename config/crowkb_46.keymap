@@ -3,10 +3,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define NERPS   1
-#define SYMNUM  2
-#define SYSTEM  3
-#define BT      4
+#define SYMNUM  1
+#define SYSTEM  2
+#define BT      3
 
 
 / {

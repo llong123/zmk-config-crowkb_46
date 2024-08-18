@@ -1,6 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
-#include "crowkb-layouts.dtsi"
+#include "crowkb_46-layouts.dtsi"
 
 / {
     chosen {
