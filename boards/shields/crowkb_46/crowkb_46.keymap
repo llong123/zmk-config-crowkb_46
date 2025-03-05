@@ -19,8 +19,8 @@
     &kp GRAVE       &kp EXCL    &kp AT  &kp HASH    &kp DLLR    &kp PRCNT   &kp MINUS   &kp LBRC    &kp RBRC    &kp STAR    &kp PLUS    &kp TILDE
     &kp LG(LSHFT)   &kp N1      &kp N2  &kp N3      &kp N4      &kp N5      &kp UNDER   &kp LPAR    &kp RPAR    &kp EQUAL   &kp COLON   &kp DQT
     &kp LGUI        &kp N6      &kp N7  &kp N8      &kp N9      &kp N0      &kp CARET   &kp LBKT    &kp RBKT    &kp LT      &kp GT      &kp AMPS
-                                                                &trans      &trans
-                                &trans  &trans      &trans      &trans      &kp DOT     &trans      &trans      &trans
+                                                                &kp A      &kp A
+                                &trans  &trans      &trans      &trans      &kp DOT     &trans      &B      &B
             >;
         };
         system_layer {
