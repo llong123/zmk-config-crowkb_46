@@ -51,9 +51,18 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mod_dance: mod_dance {
+        cmd_ctrl: cmd_ctrl {
             compatible = "zmk,behavior-tap-dance";
-            label = "MOD_DANCE";
+            label = "CMD_CTRL";
+            #binding-cells = <0>;
+            bindings = <&sk LGUI>, <&sk LCTRL>;
+
+            tapping-term-ms = <500>;
+        };
+
+        shift_alt: shift_alt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_ALT";
             #binding-cells = <0>;
             bindings = <&sk LGUI>, <&sk LCTRL>;
 
@@ -67,11 +76,10 @@
         MacOS {
             display-name = "MACOS";
             bindings = <
-&none  &kp Q  &kp W           &kp E             &kp R       &kp T        &kp Y      &kp U          &kp I      &kp O    &kp P     &none
-&none  &kp A  &kp S           &kp D             &kp F       &kp G        &kp H      &kp J          &kp K      &kp L    &kp SEMI  &kp NON_US_HASH
-&none  &kp Z  &kp X           &kp C             &kp V       &kp B        &kp N      &kp M          &kp COMMA  &kp DOT  &kp SQT   &kp SLASH
-                                                            
-              &sk LEFT_SHIFT  &sk LEFT_CONTROL  &mod_dance  &kp SPACE  &lt 1 TAB    &lt 2 ESC   &kp RET    &sk RIGHT_ALT  &bspc_del  &kp DEL
+&none  &kp Q  &kp W           &kp E          &kp R      &kp T                 &kp Y      &kp U    &kp I      &kp O            &kp P      &none
+&none  &kp A  &kp S           &kp D          &kp F      &kp G                 &kp H      &kp J    &kp K      &kp L            &kp SEMI   &none
+&none  &kp Z  &kp X           &kp C          &kp V      &kp B                 &kp N      &kp M    &kp COMMA  &kp DOT          &kp SQT    &none
+              &sk LEFT_SHIFT  &kp RIGHT_ALT  &cmd_ctrl  &kp SPACE  &lt 1 TAB  &lt 2 ESC  &kp RET  &bspc_del  &kp NON_US_HASH  &kp SLASH
             >;
         };
 
@@ -84,32 +92,29 @@
 
             display-name = "Lower";
             bindings = <
-&trans  &trans  &trans          &kp UP_ARROW    &trans           &trans    &trans  &kp N7  &kp N8  &kp N9  &kp MINUS  &trans
-&trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans    &trans  &kp N4  &kp N5  &kp N6  &kp EQUAL  &trans
-&trans  &trans  &trans          &trans          &trans           &trans    &trans  &kp N1  &kp N2  &kp N3  &kp N0     &trans
-                                                                 &trans    &trans
-                &trans          &trans          &trans           &trans    &trans  &trans  &trans  &trans
+&trans  &trans  &trans          &kp UP_ARROW    &trans           &trans          &trans  &kp N7  &kp N8  &kp N9  &kp MINUS  &trans
+&trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans          &trans  &kp N4  &kp N5  &kp N6  &kp EQUAL  &trans
+&trans  &trans  &trans          &trans          &trans           &trans          &trans  &kp N1  &kp N2  &kp N3  &kp N0     &trans
+                &trans          &trans          &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         raise_macOS {
             display-name = "Raise MacOS";
             bindings = <
-&trans  &kp LS(NUMBER_1)      &kp LS(NUMBER_2)      &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)        &kp LS(NUMBER_6)  &kp LS(N7)      &kp LS(N8)      &kp LS(N9)      &kp LS(N0)           &kp LS(MINUS)
-&trans  &kp RA(NUMBER_1)      &kp RA(NUMBER_2)      &kp RA(NUMBER_3)  &kp RA(NUMBER_4)  &kp RA(N5)        &kp RA(NUMBER_6)  &kp RA(N7)      &kp RA(N8)      &kp RA(N9)      &kp RA(N0)           &kp GRAVE
-&trans  &kp RA(RS(NUMBER_1))  &kp RS(RA(NUMBER_2))  &kp RS(RA(N3))    &kp RA(RS(N4))    &kp RA(RS(N5))    &kp RA(RS(N6))    &kp RS(RA(N7))  &kp RA(RS(N8))  &kp RA(RS(N9))  &kp RA(RIGHT_BRACE)  &kp RS(GRAVE)
-                                                                                        &trans            &trans
-                              &trans                &trans            &trans            &trans            &trans            &trans          &trans          &trans
+&trans  &kp LS(NUMBER_1)      &kp LS(NUMBER_2)      &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)              &kp LS(NUMBER_6)  &kp LS(N7)      &kp LS(N8)      &kp LS(N9)      &kp LS(N0)           &none
+&trans  &kp RA(NUMBER_1)      &kp RA(NUMBER_2)      &kp RA(NUMBER_3)  &kp RA(NUMBER_4)  &kp RA(N5)              &kp RA(GRAVE)     &kp RA(N7)      &kp RA(N8)      &kp RA(N9)      &kp RS(MINUS)        &none
+&trans  &kp RA(RS(NUMBER_1))  &kp RS(RA(NUMBER_2))  &kp RS(RA(N3))    &kp RA(RS(N4))    &kp RA(RS(N5))          &kp RS(GRAVE)     &kp RS(RA(N7))  &kp RA(RS(N8))  &kp RA(RS(N9))  &kp RA(RIGHT_BRACE)  &none
+                              &trans                &trans            &trans            &trans          &trans  &trans            &trans          &trans          &trans          &trans
             >;
         };
 
         tri_layer {
             bindings = <
-&none  &bootloader     &none   &out OUT_TOG   &none   &bt BT_SEL 0    &bt BT_SEL 3  &none   &kp C_VOLUME_UP    &none   &bootloader  &none
-&none  &none           &none   &none          &none   &bt BT_SEL 1    &bt BT_SEL 4  &none   &kp C_VOLUME_DOWN  &none   &none        &none
-&none  &studio_unlock  &none   &kp LC(LG(Q))  &none   &bt BT_SEL 2    &bt BT_CLR    &none   &kp K_MUTE         &none   &none        &none
-                                                      &trans          &trans
-                       &trans  &trans         &trans  &trans          &trans        &trans  &trans             &trans
+&none  &bootloader     &none   &out OUT_TOG   &none   &bt BT_SEL 0          &bt BT_SEL 3  &none   &kp C_VOLUME_UP    &none   &bootloader  &none
+&none  &none           &none   &none          &none   &bt BT_SEL 1          &bt BT_SEL 4  &none   &kp C_VOLUME_DOWN  &none   &none        &none
+&none  &studio_unlock  &none   &kp LC(LG(Q))  &none   &bt BT_SEL 2          &bt BT_CLR    &none   &kp K_MUTE         &none   &none        &none
+                       &trans  &trans         &trans  &trans        &trans  &trans        &trans  &trans             &trans  &trans
             >;
 
             label = "Tri_Layer";
@@ -117,14 +122,22 @@
 
         F_layer {
             bindings = <
-&trans  &trans  &kp F7  &kp F8  &kp F9  &kp F10    &trans              &trans         &trans            &trans             &trans  &trans
-&none   &trans  &kp F4  &kp F5  &kp F6  &kp F11    &kp RC(LEFT_ARROW)  &kp RC(DOWN)   &kp RC(UP_ARROW)  &kp RC(RIGHT)      &none   &none
-&none   &trans  &kp F1  &kp F2  &kp F3  &kp F12    &kp LA(LG(LEFT))    &kp LA(LG(C))  &kp LA(LG(F))     &kp LA(LG(RIGHT))  &none   &none
-                                        &none      &none
-                &trans  &trans  &none   &none      &trans              &trans         &trans            &trans
+&trans  &trans  &kp F7  &kp F8  &kp F9  &kp F10         &trans              &trans         &trans            &trans             &trans  &trans
+&none   &trans  &kp F4  &kp F5  &kp F6  &kp F11         &kp RC(LEFT_ARROW)  &kp RC(DOWN)   &kp RC(UP_ARROW)  &kp RC(RIGHT)      &none   &none
+&none   &trans  &kp F1  &kp F2  &kp F3  &kp F12         &kp LA(LG(LEFT))    &kp LA(LG(C))  &kp LA(LG(F))     &kp LA(LG(RIGHT))  &none   &none
+                &none   &none   &trans  &trans   &none  &none               &trans         &trans            &trans             &trans
             >;
 
             label = "F-Layer";
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 
